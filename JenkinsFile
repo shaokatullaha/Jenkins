@@ -1,4 +1,5 @@
 #this is for simple Hello World Jenkins Pipeline
+''' groovy
 pipeline {
     agent any
 
@@ -10,3 +11,4 @@ pipeline {
         }
     }
 }
+'''
