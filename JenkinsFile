@@ -1,0 +1,12 @@
+#this is for simple Hello World Jenkins Pipeline
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
+    }
+}
