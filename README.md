@@ -1,24 +1,37 @@
-# Jenkins
+# Jenkins Pipeline – Full Stack CRUD Project (React + Node + MySQL)
 
-## This is the First Jenkins Pipeline Code for Test
-
-For starting a new Jenkins Pipeline, first we need to:
-1. Login to Jenkins using the Jenkins IP and password.  
-2. After login, provide an **item name**, select **type: Pipeline**, and click **OK**.
+This repository contains a sample **Jenkins Pipeline** that clones a full-stack CRUD project built with **React, Node.js, and MySQL** from GitHub.
 
 ---
 
-### 🧩 Sample Pipeline
+## 🚀 Overview
+
+This Jenkins Pipeline demonstrates how to:
+- Connect Jenkins to a GitHub repository
+- Clone a specific branch
+- Verify repository contents via shell commands
+
+---
+
+## 🧩 Jenkins Pipeline Code
 
 ```groovy
 pipeline {
     agent any
 
+    environment {
+        GIT_REPO_LINK = 'https://github.com/mahadihassanrazib/full-stack-crud-project-with-react-node-mysql.git'
+        REPO_BRANCH = 'main'
+    }
+
     stages {
-        stage('Hello') {
+        stage("Clone Repository") {
             steps {
-                echo 'Hello World'
+                echo "Cloning Repository from ${GIT_REPO_LINK} (branch: ${REPO_BRANCH})"
+                git branch: "${REPO_BRANCH}", url: "${GIT_REPO_LINK}"
+                sh "ls -lah"
             }
         }
     }
 }
+

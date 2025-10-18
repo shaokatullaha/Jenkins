@@ -1,14 +1,28 @@
-#this is for simple Hello World Jenkins Pipeline
-''' groovy
+```groovy
 pipeline {
     agent any
 
+    environment {
+        GIT_REPO_LINK = 'https://github.com/mahadihassanrazib/full-stack-crud-project-with-react-node-mysql.git'
+        REPO_BRANCH = 'main'
+    }
+
     stages {
-        stage('Hello') {
+        stage("Clone Repository") {
             steps {
-                echo 'Hello, World!'
+                echo "Cloning Repository from ${GIT_REPO_LINK} (branch: ${REPO_BRANCH})"
+                git branch: "${REPO_BRANCH}", url: "${GIT_REPO_LINK}", credentialsId: 'github-credentials'
+                sh "ls -lah"
             }
         }
     }
 }
-'''
+```
+
+## 🧑‍💻 Author
+
+**Md Shaokat Ullaha**  
+Senior Systems Engineer | DevOps & Cloud Expert  
+
+📧 [contact@shaokat.me](mailto:contact@shaokat.me)  
+🌐 [LinkedIn](https://www.linkedin.com/in/shaokat-ullaha) | [GitHub](https://github.com/shaokat)
