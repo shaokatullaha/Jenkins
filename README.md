@@ -4,6 +4,7 @@
 <br>After login to the Jenkins we need to give an item name and select type as Pipeline then click okay<br>
 
 #Sample Pipeline
+<br>
 '''bash
 pipeline {
     agent any
