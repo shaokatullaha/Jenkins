@@ -16,5 +16,18 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "This will always run after the stages complete."
+            echo "Cleaning up workspace..."
+            cleanWs()
+        }
+        failure {
+            echo "The build has failed. Please check the logs for details."
+        }
+        success {
+            echo "The build was successful!"
+        }
+    }
 }
 ```
