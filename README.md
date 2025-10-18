@@ -34,4 +34,13 @@ pipeline {
         }
     }
 }
+```
 
+
+## 🧑‍💻 Author
+
+**Md Shaokat Ullaha**  
+Senior Systems Engineer | DevOps & Cloud Expert  
+
+📧 [contact@shaokat.me](mailto:contact@shaokat.me)  
+🌐 [LinkedIn](https://www.linkedin.com/in/shaokat-ullaha) | [GitHub](https://github.com/shaokat)
