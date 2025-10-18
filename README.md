@@ -1,11 +1,16 @@
 # Jenkins
-<h1><br> This is the Fist Jenkins Pipelin Code for test <br><h1>
-<br>For start the New Jenkins Pipeline first we need to login to our Jenkins using our Jenkins IP and Password <br>
-<br>After login to the Jenkins we need to give an item name and select type as Pipeline then click okay<br>
 
-#Sample Pipeline
-<br>
-'''bash
+## This is the First Jenkins Pipeline Code for Test
+
+For starting a new Jenkins Pipeline, first we need to:
+1. Login to Jenkins using the Jenkins IP and password.  
+2. After login, provide an **item name**, select **type: Pipeline**, and click **OK**.
+
+---
+
+### 🧩 Sample Pipeline
+
+```groovy
 pipeline {
     agent any
 
@@ -17,6 +22,3 @@ pipeline {
         }
     }
 }
-
-'''
-
